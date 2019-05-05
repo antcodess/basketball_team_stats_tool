@@ -10,7 +10,7 @@ def clear_screen():
 
 
 def cleaned_player(players):
-    """Cleans up player_data"""
+    """Cleans up player dictionary."""
     for player in players:
         for key, value in player.items():
             if key == "experience" and value == "YES":
@@ -26,7 +26,7 @@ def cleaned_player(players):
 
 
 def experienced_player(players):
-    """Separates experienced players from clean_players via list index"""
+    """Separates experienced players from clean players via list index."""
     experienced = []
     for index, player in enumerate(players):
         if players[index]["experience"] is True:
@@ -35,7 +35,7 @@ def experienced_player(players):
 
 
 def inexperienced_player(players):
-    """Separates inexperienced players from clean_players via list index"""
+    """Separates inexperienced players from clean players via list index."""
     inexperienced = []
     for index, player in enumerate(players):
         if players[index]["experience"] is False:
@@ -71,10 +71,9 @@ def team_stats(team):
     guardians_list = []
 
     for key, value in team.items():
-        print("Team: {} Stats".format(key))
-
-    print("-" * 20)
-    print("Total Players: {}".format(len(team[key])))
+        print("\nTeam: {} Stats".format(key))
+        print("-" * 20)
+        print("Total Players: {}".format(len(team[key])))
 
     for players in team.values():
         for player in players:
